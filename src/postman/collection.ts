@@ -1,23 +1,23 @@
-import axios from 'axios';
+import axios, { AxiosRequestConfig, AxiosResponse } from 'axios';
 import {
   getPostmanRequestURL,
   getPostmanXAPIKey,
   getRequestConfiguration,
-} from '../utils';
+} from '../config';
 
 /**
  * Fetch collection data from Postman prod account
  * @param {String} collectionId
  */
-export const getCollection = async (collectionId) => {
-  const requestConfig = getRequestConfiguration(
+export const getPostmanCollection = async () => {
+  const requestConfig: AxiosRequestConfig = getRequestConfiguration(
     'GET',
-    getPostmanRequestURL('collections', collectionId),
-    await getPostmanXAPIKey()
+    getPostmanRequestURL('collection'),
+    getPostmanXAPIKey()
   );
 
   try {
-    const res = await axios(requestConfig);
+    const res: AxiosResponse = await axios(requestConfig);
     return res.data.collection;
   } catch (e) {
     throw new Error(e);

@@ -6,7 +6,7 @@ dist
 .idea/
 package-lock.json
 test.json
-postman.json
+postman.*.json
 
 
 

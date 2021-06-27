@@ -1,16 +1,15 @@
 import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
-import 'jest';
-import { getPostmanXAPIKey } from '../src/utils';
-import { getPostmanOperations, getCollection, getSchema } from '../src/postman';
+import { setPostmanCovConfig } from '../src/config';
+import { getPostmanSchema } from '../src/postman';
 
 describe('Postman Collection and Schema collector', () => {
-  it('should get the postman xapi key', async () => {
-    process.env.API_POSTMAN_XAPI_KEY = 'PM1234';
-    const key = await getPostmanXAPIKey();
-    expect(key).toEqual('PM1234');
-    delete process.env.NODE_ENV;
-  });
+  // it('should get the postman xapi key', async () => {
+  //   process.env.API_POSTMAN_XAPI_KEY = 'PM1234';
+  //   const key = await getPostmanXAPIKey();
+  //   expect(key).toEqual('PM1234');
+  //   delete process.env.NODE_ENV;
+  // });
 
   //   it('returns data when sendMessage is called', done => {
   //       var mock = new MockAdapter(axios);
@@ -24,7 +23,8 @@ describe('Postman Collection and Schema collector', () => {
   //   });
 
   it('should get the postman xapi key', async () => {
-    const col = await getSchema('');
-    console.log(JSON.stringify(col));
+    setPostmanCovConfig();
+    const col = await getPostmanSchema();
+    console.log(col);
   });
 });
