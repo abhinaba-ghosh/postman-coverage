@@ -1,0 +1,14 @@
+node_modules
+.cache
+dist
+.vscode
+.DS_Store
+.idea/
+package-lock.json
+test.json
+postman.json
+
+
+
+
+

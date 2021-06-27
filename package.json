@@ -1,0 +1,41 @@
+{
+  "name": "postman-coverage",
+  "version": "1.1.6",
+  "description": "Derive code coverage using Postman collections",
+  "main": "dist/index.js",
+  "types": "index.d.ts",
+  "keywords": [],
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "tsc",
+    "test": "jest",
+    "format": "npx prettier --write .",
+    "prerelease": "npm run build",
+    "release": "npm cache clean --force && npm version patch && npm publish --force"
+  },
+  "peerDependencies": {},
+  "author": "Abhinaba Ghosh",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/is-ci": "^3.0.0",
+    "@types/jest": "^26.0.10",
+    "@types/node": "^15.12.4",
+    "axios-mock-adapter": "^1.19.0",
+    "jest": "^26.6.3",
+    "jest-each": "^27.0.2",
+    "prettier": "^2.0.5",
+    "ts-jest": "^26.5.0",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhinaba-ghosh/axe-playwright.git"
+  },
+  "bugs": {
+    "url": "https://github.com/abhinaba-ghosh/axe-playwright/issues"
+  },
+  "homepage": "https://github.com/abhinaba-ghosh/axe-playwright#readme"
+}
