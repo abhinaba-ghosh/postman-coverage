@@ -1,6 +1,6 @@
 {
   "name": "postman-coverage",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Derive code coverage using Postman collections",
   "main": "dist/index.js",
   "types": "index.d.ts",
