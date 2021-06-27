@@ -1,6 +1,6 @@
 {
   "name": "postman-coverage",
-  "version": "1.1.6",
+  "version": "0.0.1",
   "description": "Derive code coverage using Postman collections",
   "main": "dist/index.js",
   "types": "index.d.ts",
@@ -24,6 +24,7 @@
     "jest": "^26.6.3",
     "jest-each": "^27.0.2",
     "prettier": "^2.0.5",
+    "semantic-release": "^17.4.4",
     "ts-jest": "^26.5.0",
     "typescript": "^4.1.3"
   },
@@ -32,10 +33,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/abhinaba-ghosh/axe-playwright.git"
+    "url": "git+https://github.com/abhinaba-ghosh/postman-coverage"
   },
   "bugs": {
-    "url": "https://github.com/abhinaba-ghosh/axe-playwright/issues"
+    "url": "https://github.com/abhinaba-ghosh/postman-coverage/issues"
   },
-  "homepage": "https://github.com/abhinaba-ghosh/axe-playwright#readme"
+  "homepage": "https://github.com/abhinaba-ghosh/postman-coverage#readme"
 }
